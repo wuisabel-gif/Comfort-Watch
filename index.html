@@ -1,0 +1,1946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comfort Watch: Korean, Japanese & Chinese Drama Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;600;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Noto+Serif+KR:wght@600;900&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #17130f;
+    --ink-soft: #211a14;
+    --ink-line: #392e22;
+    --paper: #f3ead9;
+    --paper-dim: #ddccae;
+    --text-loud: #f0e7d6;
+    --text-quiet: #b3a58c;
+    --text-faint: #7d715c;
+    --seal: #dd5031;
+    --seal-deep: #a3341c;
+    --indigo: #55648f;
+    --gold: #cca458;
+    --jade: #5c8172;
+    --radius: 9px;
+    --font-display: 'Zen Old Mincho', 'Noto Serif KR', 'Noto Serif SC', serif;
+    --font-body: 'Zen Kaku Gothic New', 'Noto Sans KR', 'Noto Sans SC', sans-serif;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+  }
+
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--text-loud);
+    font-family:var(--font-body);
+    line-height:1.6;
+    position:relative;
+  }
+
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:50;
+    opacity:0.04;
+    mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+
+  a{color:inherit;}
+
+  .wrap{max-width:1060px;margin:0 auto;padding:0 24px;}
+
+  .ticker-bar{
+    border-bottom:1px solid var(--ink-line);
+    background:var(--ink-soft);
+    overflow:hidden;
+    white-space:nowrap;
+    padding:12px 0;
+  }
+  .ticker-track{
+    display:inline-block;
+    font-family:var(--font-display);
+    font-style:italic;
+    font-size:14px;
+    letter-spacing:0.01em;
+    color:var(--text-faint);
+    animation:scrollTicker 90s linear infinite;
+  }
+  @keyframes scrollTicker{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-50%);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .ticker-track{animation:none;}
+  }
+  .ticker-track span{margin:0 20px;color:var(--text-faint);}
+
+  header.site{padding:22px 0 0;}
+  .brandrow{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+  .wordmark{
+    font-family:var(--font-display);
+    font-weight:600;
+    font-size:23px;
+    letter-spacing:0.01em;
+  }
+  .wordmark small{
+    display:block;
+    font-family:var(--font-body);
+    font-size:11px;
+    letter-spacing:0.06em;
+    color:var(--text-faint);
+    font-weight:500;
+    margin-top:4px;
+  }
+  .header-right{display:flex;flex-direction:column;align-items:flex-end;gap:10px;}
+  .lang-switch{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;}
+  .lang-btn{
+    font-family:var(--font-body);
+    font-size:12px;
+    font-weight:500;
+    padding:5px 11px;
+    border:1px solid var(--ink-line);
+    background:var(--ink-soft);
+    color:var(--text-quiet);
+    border-radius:999px;
+    cursor:pointer;
+    transition:all .15s ease;
+  }
+  .lang-btn:hover{border-color:var(--paper-dim);color:var(--text-loud);}
+  .lang-btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px;}
+  .lang-btn[aria-pressed="true"]{
+    background:var(--paper);
+    color:var(--ink);
+    border-color:transparent;
+    font-weight:700;
+  }
+  .glyph-legend{
+    display:flex;
+    gap:16px;
+    font-family:var(--font-body);
+    font-size:13px;
+    color:var(--text-quiet);
+  }
+  .glyph-legend b{color:var(--paper);font-family:var(--font-display);font-size:16px;font-weight:600;margin-right:5px;}
+
+  .hero{
+    padding:60px 0 54px;
+    border-bottom:1px solid var(--ink-line);
+  }
+  .eyebrow{
+    font-family:var(--font-body);
+    font-weight:600;
+    font-size:13px;
+    letter-spacing:0.08em;
+    color:var(--seal);
+    text-transform:uppercase;
+    margin-bottom:18px;
+  }
+  h1.headline{
+    font-family:var(--font-display);
+    font-weight:600;
+    font-size:clamp(32px, 6vw, 58px);
+    line-height:1.15;
+    margin:0 0 22px;
+    max-width:18ch;
+  }
+  .hero p.sub{
+    font-size:16.5px;
+    color:var(--text-quiet);
+    max-width:56ch;
+    margin:0 0 30px;
+  }
+  .btn{
+    font-family:var(--font-body);
+    font-weight:600;
+    font-size:14px;
+    letter-spacing:0.01em;
+    border:1px solid var(--paper-dim);
+    background:transparent;
+    color:var(--text-loud);
+    padding:13px 22px;
+    border-radius:var(--radius);
+    cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    transition:border-color .2s ease, color .2s ease, background .2s ease;
+  }
+  .btn:hover{border-color:var(--seal);color:var(--seal);}
+  .btn:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+  .btn.primary{
+    background:var(--seal);
+    border-color:var(--seal);
+    color:var(--ink);
+  }
+  .btn.primary:hover{
+    background:var(--seal-deep);
+    border-color:var(--seal-deep);
+    color:var(--paper);
+  }
+
+  section.tuner{
+    padding:52px 0;
+    border-bottom:1px solid var(--ink-line);
+  }
+  .section-head{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+    margin-bottom:28px;
+  }
+  .section-head h2{
+    font-family:var(--font-display);
+    font-size:24px;
+    font-weight:600;
+    margin:0;
+  }
+  .section-head .count-note{
+    font-family:var(--font-body);
+    font-size:13px;
+    color:var(--text-faint);
+  }
+
+  .field-label{
+    font-family:var(--font-body);
+    font-weight:600;
+    font-size:13px;
+    letter-spacing:0.04em;
+    color:var(--text-faint);
+    margin:0 0 12px;
+  }
+
+  .region-row{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:34px;
+  }
+  .chip-region{
+    font-family:var(--font-body);
+    font-weight:500;
+    font-size:14.5px;
+    border:1px solid var(--ink-line);
+    background:var(--ink-soft);
+    color:var(--text-quiet);
+    padding:10px 18px;
+    border-radius:var(--radius);
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    transition:all .18s ease;
+  }
+  .chip-region .glyph{font-family:var(--font-display);font-size:16px;}
+  .chip-region:hover{border-color:var(--paper-dim);color:var(--text-loud);}
+  .chip-region:focus-visible{outline:2px solid var(--gold);outline-offset:2px;}
+  .chip-region[aria-pressed="true"]{
+    color:var(--ink);
+    border-color:transparent;
+  }
+  .chip-region[data-region="ALL"][aria-pressed="true"]{background:var(--paper);}
+  .chip-region[data-region="KR"][aria-pressed="true"]{background:var(--indigo);color:var(--paper);}
+  .chip-region[data-region="JP"][aria-pressed="true"]{background:var(--seal);color:var(--paper);}
+  .chip-region[data-region="CN"][aria-pressed="true"]{background:var(--gold);color:var(--ink);}
+
+  .mood-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(150px,1fr));
+    gap:9px;
+    margin-bottom:32px;
+  }
+  .chip-mood{
+    font-family:var(--font-body);
+    font-size:14px;
+    border:1px solid var(--ink-line);
+    background:var(--ink-soft);
+    color:var(--text-quiet);
+    padding:11px 14px;
+    border-radius:var(--radius);
+    cursor:pointer;
+    text-align:left;
+    transition:all .18s ease;
+  }
+  .chip-mood:hover{border-color:var(--paper-dim);color:var(--text-loud);}
+  .chip-mood:focus-visible{outline:2px solid var(--gold);outline-offset:2px;}
+  .chip-mood[aria-pressed="true"]{
+    background:var(--seal);
+    border-color:var(--seal);
+    color:var(--paper);
+  }
+
+  .tuner-actions{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    align-items:center;
+  }
+  .clear-link{
+    font-family:var(--font-body);
+    font-size:13.5px;
+    color:var(--text-faint);
+    background:none;
+    border:none;
+    cursor:pointer;
+    text-decoration:underline;
+    text-underline-offset:3px;
+    padding:8px 4px;
+  }
+  .clear-link:hover{color:var(--text-loud);}
+
+  section.lineup{padding:52px 0 80px;}
+  .results-meta{
+    font-family:var(--font-body);
+    font-size:14px;
+    color:var(--text-faint);
+    margin-top:6px;
+  }
+  .results-meta b{color:var(--gold);font-weight:700;}
+
+  .bonus-slot{margin-bottom:26px;}
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
+    gap:18px;
+    margin-top:26px;
+  }
+
+  .card{
+    position:relative;
+    background:var(--paper);
+    color:var(--ink);
+    padding:22px 22px 24px;
+    border:1px solid var(--ink-line);
+    border-radius:calc(var(--radius) + 3px);
+    display:flex;
+    flex-direction:column;
+    min-height:100%;
+  }
+  .card.bonus{
+    border-color:var(--gold);
+    box-shadow:0 0 0 1px var(--gold);
+  }
+  .card.pulse{animation:pulseGlow 1.6s ease-out 2;}
+  @keyframes pulseGlow{
+    0%{box-shadow:0 0 0 0 rgba(204,164,88,0.55);}
+    70%{box-shadow:0 0 0 10px rgba(204,164,88,0);}
+    100%{box-shadow:0 0 0 0 rgba(204,164,88,0);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .card.pulse{animation:none;outline:2px solid var(--gold);}
+  }
+
+  .card-top{
+    display:flex;
+    justify-content:flex-end;
+    margin-bottom:6px;
+  }
+  .stamp{width:50px;height:50px;flex-shrink:0;}
+
+  .card h3{
+    font-family:var(--font-display);
+    font-size:21px;
+    font-weight:600;
+    margin:0 0 8px;
+    line-height:1.25;
+  }
+  .card-meta{
+    font-family:var(--font-body);
+    font-size:13px;
+    color:var(--text-faint);
+    margin-bottom:12px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    flex-wrap:wrap;
+  }
+  .dot{width:7px;height:7px;border-radius:50%;display:inline-block;}
+  .dot.KR{background:var(--indigo);}
+  .dot.JP{background:var(--seal);}
+  .dot.CN{background:var(--gold);}
+
+  .card p.blurb{
+    font-size:14.5px;
+    color:#3a332a;
+    margin:0 0 16px;
+    flex-grow:1;
+  }
+
+  .card .why{
+    font-family:var(--font-body);
+    font-size:13px;
+    font-style:italic;
+    color:var(--seal-deep);
+    border-top:1px dashed var(--paper-dim);
+    padding-top:13px;
+    margin-bottom:2px;
+  }
+  .card .featured-tag{
+    font-family:var(--font-body);
+    font-weight:600;
+    font-size:12.5px;
+    color:var(--jade);
+    border-top:1px dashed var(--paper-dim);
+    padding-top:13px;
+    margin-bottom:2px;
+    letter-spacing:0.04em;
+  }
+
+  .wiki-link{
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+    margin-top:14px;
+    font-family:var(--font-body);
+    font-size:13px;
+    color:var(--seal-deep);
+    text-decoration:none;
+    border-bottom:1px solid transparent;
+    width:fit-content;
+  }
+  .wiki-link:hover{border-bottom-color:var(--seal-deep);}
+  .wiki-link:focus-visible{outline:2px solid var(--gold);outline-offset:2px;}
+
+  .empty-state{
+    border:1px dashed var(--ink-line);
+    border-radius:var(--radius);
+    padding:40px 24px;
+    text-align:center;
+    color:var(--text-quiet);
+    font-family:var(--font-body);
+    font-size:14px;
+  }
+  .empty-state .big{
+    display:block;
+    font-family:var(--font-display);
+    font-size:22px;
+    color:var(--text-loud);
+    margin-bottom:10px;
+  }
+
+  footer{
+    border-top:1px solid var(--ink-line);
+    padding:28px 0 40px;
+    font-family:var(--font-body);
+    font-size:13px;
+    color:var(--text-faint);
+  }
+  footer p{max-width:64ch;margin:0 0 8px;}
+
+  @media (max-width:560px){
+    .region-row{gap:8px;}
+    .mood-grid{grid-template-columns:repeat(auto-fill, minmax(130px,1fr));}
+    .header-right{align-items:flex-start;}
+    .lang-switch{justify-content:flex-start;}
+  }
+</style>
+</head>
+<body>
+
+<div class="ticker-bar">
+  <div class="ticker-track" id="tickerTrack" aria-hidden="true"></div>
+</div>
+
+<div class="wrap">
+  <header class="site">
+    <div class="brandrow">
+      <div class="wordmark"><span id="wordmarkText"></span><small id="wordmarkSub"></small></div>
+      <div class="header-right">
+        <div class="lang-switch" id="langSwitch" role="group" aria-label="Language"></div>
+        <div class="glyph-legend" id="glyphLegend"></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow" id="eyebrowText"></p>
+    <h1 class="headline" id="headlineText"></h1>
+    <p class="sub" id="subText"></p>
+    <button class="btn primary" id="startBtn"><span id="startBtnText"></span> <span aria-hidden="true">↓</span></button>
+  </section>
+
+  <section class="tuner" id="tuner">
+    <div class="section-head">
+      <h2 id="moodSectionHeadingText"></h2>
+      <span class="count-note" id="selCount"></span>
+    </div>
+
+    <p class="field-label" id="regionLabelText"></p>
+    <div class="region-row" id="regionRow" role="group" aria-label="Filter by country of origin"></div>
+
+    <p class="field-label" id="moodLabelText"></p>
+    <div class="mood-grid" id="moodGrid" role="group" aria-label="Filter by mood or genre"></div>
+
+    <div class="tuner-actions">
+      <button class="btn primary" id="scanBtn"><span id="scanBtnText"></span> <span aria-hidden="true">↓</span></button>
+      <button class="btn" id="surpriseBtn"><span id="surpriseBtnText"></span> <span aria-hidden="true">✦</span></button>
+      <button class="clear-link" id="clearBtn"></button>
+    </div>
+  </section>
+
+  <section class="lineup" id="lineup">
+    <div class="section-head">
+      <h2 id="lineupHeadingText"></h2>
+    </div>
+    <p class="results-meta" id="resultsMeta"></p>
+    <div class="bonus-slot" id="bonusSlot"></div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <footer>
+    <p id="footer1Text"></p>
+    <p id="footer2Text"></p>
+  </footer>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="roughEdge" x="-20%" y="-20%" width="140%" height="140%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7" result="noise"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="6"/>
+  </filter>
+</svg>
+
+<script>
+(function(){
+
+  var COUNTRY_GLYPH = {KR:'韓', JP:'日', CN:'中'};
+  var HTML_LANG = {en:'en', ko:'ko', ja:'ja', zh:'zh-Hans'};
+
+  var TAG_LABELS = {
+  "en": {
+    "romance": "Romance",
+    "comedy": "Comedy",
+    "thriller": "Thriller / Mystery",
+    "historical": "Historical",
+    "fantasy": "Fantasy / Wuxia",
+    "slice-of-life": "Slice of Life",
+    "family": "Family",
+    "workplace": "Workplace",
+    "crime": "Crime",
+    "coming-of-age": "Coming of Age",
+    "horror": "Horror / Survival",
+    "melodrama": "Melodrama / Revenge"
+  },
+  "ko": {
+    "romance": "로맨스",
+    "comedy": "코미디",
+    "thriller": "스릴러 / 미스터리",
+    "historical": "사극",
+    "fantasy": "판타지 / 무협",
+    "slice-of-life": "일상물",
+    "family": "가족",
+    "workplace": "오피스물",
+    "crime": "범죄",
+    "coming-of-age": "성장물",
+    "horror": "호러 / 서바이벌",
+    "melodrama": "멜로 / 복수극"
+  },
+  "ja": {
+    "romance": "恋愛",
+    "comedy": "コメディ",
+    "thriller": "サスペンス・ミステリー",
+    "historical": "時代劇",
+    "fantasy": "ファンタジー・武侠",
+    "slice-of-life": "日常もの",
+    "family": "家族もの",
+    "workplace": "職業もの",
+    "crime": "犯罪",
+    "coming-of-age": "青春もの",
+    "horror": "ホラー・サバイバル",
+    "melodrama": "メロドラマ・復讐劇"
+  },
+  "zh": {
+    "romance": "爱情",
+    "comedy": "喜剧",
+    "thriller": "悬疑 / 惊悚",
+    "historical": "古装",
+    "fantasy": "奇幻 / 武侠",
+    "slice-of-life": "生活流",
+    "family": "家庭",
+    "workplace": "职场",
+    "crime": "犯罪",
+    "coming-of-age": "青春成长",
+    "horror": "恐怖 / 生存",
+    "melodrama": "苦情 / 复仇"
+  }
+};
+  var COUNTRY_NAMES = {
+  "en": {
+    "KR": "Korea",
+    "JP": "Japan",
+    "CN": "China"
+  },
+  "ko": {
+    "KR": "한국",
+    "JP": "일본",
+    "CN": "중국"
+  },
+  "ja": {
+    "KR": "韓国",
+    "JP": "日本",
+    "CN": "中国"
+  },
+  "zh": {
+    "KR": "韩国",
+    "JP": "日本",
+    "CN": "中国"
+  }
+};
+  var UI = {
+  "en": {
+    "langName": "EN",
+    "brandName": "Comfort Watch",
+    "brandSub": "Shows to watch with dinner, from Korea, Japan &amp; China",
+    "eyebrow": "54 shows, hand-picked",
+    "headline": "Something good to watch with dinner.",
+    "sub": "Three countries, one easy watchlist. Pick a region and a few moods, and this guide brings up dramas that go down easy with tonight's meal. No streaming logins, no algorithm, just a curated lineup.",
+    "getStarted": "Get started",
+    "moodSectionHeading": "What are you in the mood for?",
+    "regionLabel": "Region",
+    "moodLabel": "Mood &amp; genre, pick as many as fit",
+    "seeLineup": "See tonight's lineup",
+    "surpriseMe": "Surprise me",
+    "clearMoods": "clear moods",
+    "lineupHeading": "Tonight's lineup",
+    "allRegions": "All regions",
+    "goodFitFor": "A good fit for:",
+    "featuredTonight": "Featured tonight",
+    "wikiLinkText": "Poster &amp; details on Wikipedia",
+    "bonusLabel": "A little surprise",
+    "emptyBig": "Nothing on this frequency yet",
+    "emptySub": "Try a different region, or clear a mood or two.",
+    "footer1": "Comfort Watch is a static, hand-curated recommendation guide. It isn't connected to any streaming service and doesn't track where a show is currently available, since that changes by country and by season. Look up the title on your usual platform once you've found something worth watching.",
+    "footer2": "54 shows, 3 countries, 12 moods. Built for the \"what do I put on while I eat\" moment.",
+    "moodsSelected0": "0 moods selected",
+    "moodsSelected1": "1 mood selected",
+    "moodsSelectedN": " moods selected"
+  },
+  "ko": {
+    "langName": "한국어",
+    "brandName": "밥친구",
+    "brandSub": "한국, 일본, 중국 드라마 중에서 저녁 먹으면서 보기 좋은 작품들",
+    "eyebrow": "엄선한 드라마 54편",
+    "headline": "저녁 먹으면서 보기 좋은 드라마.",
+    "sub": "세 나라, 하나의 편안한 시청 목록. 지역과 원하는 분위기를 몇 개 골라보세요. 오늘 저녁과 잘 어울리는 드라마를 골라드립니다. 로그인도, 알고리즘도 없이 직접 고른 작품들만 있어요.",
+    "getStarted": "시작하기",
+    "moodSectionHeading": "오늘은 어떤 분위기가 끌리세요?",
+    "regionLabel": "지역",
+    "moodLabel": "분위기 및 장르, 원하는 만큼 골라보세요",
+    "seeLineup": "오늘의 추천 보기",
+    "surpriseMe": "아무거나 추천해줘",
+    "clearMoods": "선택 초기화",
+    "lineupHeading": "오늘의 추천 목록",
+    "allRegions": "전체 지역",
+    "goodFitFor": "이런 분위기에 어울려요:",
+    "featuredTonight": "오늘의 추천작",
+    "wikiLinkText": "위키피디아에서 포스터 보기",
+    "bonusLabel": "깜짝 추천",
+    "emptyBig": "아직 해당하는 작품이 없어요",
+    "emptySub": "다른 지역을 선택하거나, 분위기를 하나쯤 지워보세요.",
+    "footer1": "밥친구는 정적으로 운영되는, 직접 고른 추천 가이드입니다. 특정 스트리밍 서비스와 연결되어 있지 않으며, 나라와 시기에 따라 달라지는 시청 가능 여부는 추적하지 않습니다. 마음에 드는 작품을 찾으면 자주 쓰는 플랫폼에서 검색해보세요.",
+    "footer2": "드라마 54편, 3개국, 12가지 분위기. \"밥 먹으면서 뭐 보지\" 하는 순간을 위해 만들었습니다.",
+    "moodsSelected0": "0개 선택됨",
+    "moodsSelected1": "1개 선택됨",
+    "moodsSelectedN": "개 선택됨"
+  },
+  "ja": {
+    "langName": "日本語",
+    "brandName": "ご飯のお供",
+    "brandSub": "韓国、日本、中国のドラマから、夕食のお供にぴったりな作品を",
+    "eyebrow": "厳選ドラマ54作品",
+    "headline": "夕食のお供にちょうどいいドラマ。",
+    "sub": "3つの国、ひとつの気楽なウォッチリスト。地域と気分をいくつか選ぶと、今夜のご飯にちょうど合うドラマが見つかります。ログイン不要、アルゴリズムなし、あるのは厳選されたラインナップだけです。",
+    "getStarted": "はじめる",
+    "moodSectionHeading": "今夜はどんな気分?",
+    "regionLabel": "地域",
+    "moodLabel": "気分・ジャンル(いくつでも選べます)",
+    "seeLineup": "今夜のラインナップを見る",
+    "surpriseMe": "おまかせで",
+    "clearMoods": "選択をリセット",
+    "lineupHeading": "今夜のラインナップ",
+    "allRegions": "すべての地域",
+    "goodFitFor": "こんな気分にぴったり:",
+    "featuredTonight": "今夜のおすすめ",
+    "wikiLinkText": "Wikipediaでポスターを見る",
+    "bonusLabel": "ちょっとしたサプライズ",
+    "emptyBig": "該当する作品がまだありません",
+    "emptySub": "別の地域を選ぶか、気分の選択を少し減らしてみてください。",
+    "footer1": "「ご飯のお供」は静的な、手作業で選んだおすすめガイドです。特定の配信サービスとは連携しておらず、国や時期によって変わる配信状況は追跡していません。気になる作品が見つかったら、いつものプラットフォームで検索してみてください。",
+    "footer2": "54作品、3カ国、12の気分。「ご飯食べながら何見よう」という瞬間のために作りました。",
+    "moodsSelected0": "0個選択中",
+    "moodsSelected1": "1個選択中",
+    "moodsSelectedN": "個選択中"
+  },
+  "zh": {
+    "langName": "中文",
+    "brandName": "下饭剧",
+    "brandSub": "来自韩国、日本和中国、适合配饭观看的剧集",
+    "eyebrow": "精选54部剧",
+    "headline": "配饭刚刚好的剧。",
+    "sub": "三个国家,一份轻松的片单。选一个地区,再选几种心情,就能找到最适合今晚这顿饭的剧。不用登录任何平台,也没有算法推荐,只有精心挑选的片单。",
+    "getStarted": "开始吧",
+    "moodSectionHeading": "今天想看点什么?",
+    "regionLabel": "地区",
+    "moodLabel": "心情与类型,可以多选",
+    "seeLineup": "查看今晚片单",
+    "surpriseMe": "随便来一部",
+    "clearMoods": "清除选择",
+    "lineupHeading": "今晚的片单",
+    "allRegions": "所有地区",
+    "goodFitFor": "适合这些心情:",
+    "featuredTonight": "今日精选",
+    "wikiLinkText": "在维基百科查看海报",
+    "bonusLabel": "一个小惊喜",
+    "emptyBig": "暂时没有符合的剧",
+    "emptySub": "试试换个地区,或者减少一个心情标签。",
+    "footer1": "下饭剧是一份静态的、手工挑选的推荐指南,不与任何流媒体平台绑定,也不追踪某部剧目前在哪里能看,因为这会因国家和季节而变化。找到心仪的剧后,去你常用的平台搜一下就好。",
+    "footer2": "54部剧,3个国家,12种心情。专为“吃饭的时候看点什么”这一刻而做。",
+    "moodsSelected0": "0个心情已选",
+    "moodsSelected1": "1个心情已选",
+    "moodsSelectedN": "个心情已选"
+  }
+};
+  var SHOWS = [
+  {
+    "id": "kr1",
+    "title": "Reply 1988",
+    "country": "KR",
+    "tags": [
+      "family",
+      "slice-of-life",
+      "coming-of-age"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Reply_1988",
+    "blurb": {
+      "en": "Five neighborhood families in 1980s Seoul raise their kids side by side, and one girl's future husband is hidden somewhere among her childhood friends.",
+      "ko": "1980년대 서울, 한 골목에 사는 다섯 가족이 함께 아이들을 키운다. 훗날 한 소녀의 남편이 될 사람은 그녀의 어린 시절 친구들 중 누군가다.",
+      "ja": "1980年代のソウル、同じ路地に暮らす5つの家族が子どもたちを一緒に育てていく。ある少女の未来の夫は、幼なじみの誰かの中に隠れている。",
+      "zh": "1980年代的首尔,同一条胡同里的五个家庭一起把孩子们养大。多年后,其中一个女孩未来的丈夫,就藏在她儿时的这群朋友之中。"
+    }
+  },
+  {
+    "id": "kr2",
+    "title": "Crash Landing on You",
+    "country": "KR",
+    "tags": [
+      "romance",
+      "comedy",
+      "melodrama"
+    ],
+    "featured": true,
+    "wiki": "https://en.wikipedia.org/wiki/Crash_Landing_on_You",
+    "blurb": {
+      "en": "A paragliding accident strands a South Korean heiress in North Korea, where a straight-laced army officer hides her and slowly falls for her.",
+      "ko": "패러글라이딩 사고로 북한에 불시착한 한국 재벌 상속녀. 원칙주의자 북한 장교가 그녀를 숨겨주다 서서히 사랑에 빠진다.",
+      "ja": "パラグライダー事故で北朝鮮に不時着した韓国の財閥令嬢。彼女をかくまう堅物の軍将校が、次第に彼女に惹かれていく。",
+      "zh": "一次滑翔伞事故让韩国财阀千金意外降落在朝鲜。一位古板正直的军官把她藏了起来,却渐渐爱上了她。"
+    }
+  },
+  {
+    "id": "kr3",
+    "title": "Signal",
+    "country": "KR",
+    "tags": [
+      "thriller",
+      "crime"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Signal_(South_Korean_TV_series)",
+    "blurb": {
+      "en": "A worn-out walkie talkie lets a present-day detective speak across decades to a cop working the same string of cold cases in the 1980s and 90s.",
+      "ko": "낡은 무전기 하나로 현재의 형사가 수십 년 전 형사와 시간을 넘어 대화한다. 두 사람은 1980~90년대의 미제 사건들을 함께 파헤쳐 나간다.",
+      "ja": "古びたトランシーバーが、現代の刑事と数十年前の刑事を時空を超えてつなぐ。二人は1980〜90年代の未解決事件を追っていく。",
+      "zh": "一部老旧的对讲机,让现在的警探跨越几十年,与过去的警察对话。两人携手追查80、90年代的一系列悬案。"
+    }
+  },
+  {
+    "id": "kr4",
+    "title": "Kingdom",
+    "country": "KR",
+    "tags": [
+      "horror",
+      "historical",
+      "thriller"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Kingdom_(South_Korean_TV_series)",
+    "blurb": {
+      "en": "A crown prince investigates a mysterious plague sweeping the Joseon dynasty and finds a slow-moving epidemic that turns the starving into the undead.",
+      "ko": "조선을 휩쓰는 의문의 역병을 조사하던 세자. 그는 굶주린 백성들을 되살아난 존재로 바꾸는 서서히 퍼지는 전염병의 실체를 마주한다.",
+      "ja": "朝鮮全土を襲う謎の疫病を調査する世子。それは飢えた民を蘇らせる、ゆっくりと広がる恐ろしい伝染病だった。",
+      "zh": "一位世子调查席卷朝鲜的神秘瘟疫,发现这是一场缓慢蔓延的疫病,能让饥饿的百姓变成行尸走肉。"
+    }
+  },
+  {
+    "id": "kr5",
+    "title": "My Mister",
+    "country": "KR",
+    "tags": [
+      "slice-of-life",
+      "family",
+      "melodrama"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/My_Mister",
+    "blurb": {
+      "en": "A weary middle-aged engineer and a hardened, debt-burdened young woman form a quiet friendship that helps them both keep going through difficult days.",
+      "ko": "지친 중년의 엔지니어와 빚에 시달리며 단단해진 젊은 여성. 두 사람은 조용한 우정을 나누며 힘겨운 하루하루를 버텨낸다.",
+      "ja": "疲れ切った中年エンジニアと、借金に苦しみながらも芯の強い若い女性。二人は静かな友情を育みながら、辛い日々を支え合っていく。",
+      "zh": "一位疲惫的中年工程师和一个被债务压得坚强起来的年轻女子。两人建立起一段安静的友谊,彼此支撑着熬过艰难的日子。"
+    }
+  },
+  {
+    "id": "kr6",
+    "title": "Hospital Playlist",
+    "country": "KR",
+    "tags": [
+      "slice-of-life",
+      "workplace",
+      "comedy"
+    ],
+    "featured": true,
+    "wiki": "https://en.wikipedia.org/wiki/Hospital_Playlist",
+    "blurb": {
+      "en": "Five doctors who have been friends since medical school lean on each other, and on their garage band, to survive the long hours of hospital life.",
+      "ko": "의대 시절부터 친구였던 다섯 명의 의사들. 서로에게, 그리고 함께 만든 밴드에 기대며 길고 고된 병원 생활을 버텨낸다.",
+      "ja": "医学生時代からの友人である5人の医師たち。互いに、そして自分たちのバンド活動に支えられながら、長く過酷な病院生活を乗り越えていく。",
+      "zh": "五位从医学院时期就是朋友的医生,靠着彼此,也靠着他们组的乐队,一起熬过医院里漫长而辛苦的日子。"
+    }
+  },
+  {
+    "id": "kr7",
+    "title": "Stranger",
+    "country": "KR",
+    "tags": [
+      "crime",
+      "thriller",
+      "workplace"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Stranger_(TV_series)",
+    "blurb": {
+      "en": "An emotionally blunted prosecutor and a principled detective dig through a web of corruption after one murder pulls back the curtain on the justice system.",
+      "ko": "감정을 느끼지 못하는 검사와 원칙을 지키는 형사. 한 건의 살인 사건을 계기로 두 사람은 사법 시스템 깊숙이 얽힌 부패의 실체를 파헤친다.",
+      "ja": "感情を失った検事と、信念を曲げない刑事。一件の殺人事件をきっかけに、二人は司法制度の裏に潜む腐敗の実態を暴いていく。",
+      "zh": "一位情感淡漠的检察官和一位坚守原则的警探。一桩命案揭开了司法体系背后错综复杂的腐败网络,两人携手深挖真相。"
+    }
+  },
+  {
+    "id": "kr8",
+    "title": "Mr. Sunshine",
+    "country": "KR",
+    "tags": [
+      "historical",
+      "romance",
+      "melodrama"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Mr._Sunshine_(South_Korean_TV_series)",
+    "blurb": {
+      "en": "A boy who fled slavery to America returns to Korea as a U.S. Marine officer during the last days of the Joseon dynasty and falls for a noblewoman turned resistance fighter.",
+      "ko": "노비 신분을 피해 미국으로 떠났던 소년. 조선 왕조 말기, 그는 미 해병대 장교가 되어 고국으로 돌아오고, 독립운동가가 된 양반가 여인과 사랑에 빠진다.",
+      "ja": "奴隷の身分から逃れアメリカへ渡った少年。朝鮮王朝末期、彼は米海兵隊士官として故郷に戻り、独立運動家となった両班の令嬢と恋に落ちる。",
+      "zh": "一个为逃离奴籍远走美国的男孩,在朝鲜王朝末期以美国海军陆战队军官的身份归国,并爱上了投身抵抗运动的贵族女子。"
+    }
+  },
+  {
+    "id": "kr9",
+    "title": "Extraordinary Attorney Woo",
+    "country": "KR",
+    "tags": [
+      "workplace",
+      "comedy",
+      "family"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Extraordinary_Attorney_Woo",
+    "blurb": {
+      "en": "A brilliant autistic lawyer navigates courtroom cases and office politics at her first big law firm job, one careful observation at a time.",
+      "ko": "천재적인 자폐 스펙트럼 변호사가 대형 로펌에서의 첫 직장 생활을 시작한다. 법정 사건과 사내 정치 속에서 그녀는 세심한 관찰력으로 하나씩 헤쳐 나간다.",
+      "ja": "天才的な自閉スペクトラムの弁護士が、大手法律事務所での初めての仕事に挑む。法廷での事件も社内政治も、彼女は鋭い観察力で一つひとつ乗り越えていく。",
+      "zh": "一位患有自闭症谱系障碍的天才律师,在大型律所迎来职业生涯的第一份工作。她凭借细致入微的观察力,一步步应对案件与办公室里的人情世故。"
+    }
+  },
+  {
+    "id": "kr10",
+    "title": "The Glory",
+    "country": "KR",
+    "tags": [
+      "melodrama",
+      "thriller",
+      "coming-of-age"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/The_Glory_(TV_series)",
+    "blurb": {
+      "en": "A woman methodically rebuilds her life around a single goal: making the classmates who tortured her in high school pay for it, years later.",
+      "ko": "한 여자가 오직 하나의 목표를 위해 자신의 삶을 치밀하게 재설계한다. 고등학교 시절 자신을 괴롭혔던 동창들에게, 세월이 흐른 뒤 반드시 대가를 치르게 하는 것.",
+      "ja": "ある女性が、たった一つの目的のために人生を緻密に組み立て直していく。高校時代に自分を苦しめた同級生たちに、何年もかけて必ず報いを受けさせるために。",
+      "zh": "一个女人多年来精心谋划,只为了一个目标:让当年在高中折磨她的同学们,付出应有的代价。"
+    }
+  },
+  {
+    "id": "kr11",
+    "title": "Twenty-Five Twenty-One",
+    "country": "KR",
+    "tags": [
+      "coming-of-age",
+      "romance",
+      "family"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Twenty-Five_Twenty-One",
+    "blurb": {
+      "en": "During the aftermath of Korea's financial crisis, a determined teenage fencer and a young man who just lost his family's fortune push each other toward their futures.",
+      "ko": "외환 위기의 여파가 남은 시절, 꿈을 향해 나아가는 십대 펜싱 선수와 하루아침에 집안이 몰락한 청년. 두 사람은 서로를 밀어주며 각자의 미래를 향해 나아간다.",
+      "ja": "通貨危機の余波が残る時代、夢に向かって突き進む十代のフェンシング選手と、一夜にして家が没落した青年。二人は互いを支え合いながら、それぞれの未来へと歩み出す。",
+      "zh": "在金融危机的余波中,一位志向坚定的少女击剑选手,和一个刚刚失去家族财富的年轻人,彼此激励着,推动对方走向各自的未来。"
+    }
+  },
+  {
+    "id": "kr12",
+    "title": "Vincenzo",
+    "country": "KR",
+    "tags": [
+      "crime",
+      "comedy",
+      "thriller"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Vincenzo_(TV_series)",
+    "blurb": {
+      "en": "An Italian-raised Korean mafia lawyer relocates to Seoul and turns his ruthless consigliere skills against the shady conglomerate trying to take over his building.",
+      "ko": "이탈리아에서 자란 한국계 마피아 변호사가 서울로 거처를 옮긴다. 그는 자신이 사는 건물을 노리는 비리 대기업을 상대로 냉철한 마피아식 수완을 발휘한다.",
+      "ja": "イタリア育ちの韓国系マフィア弁護士がソウルに拠点を移す。彼は自分の住むビルを狙う悪徳大企業を相手に、冷徹なマフィア仕込みの手腕を発揮していく。",
+      "zh": "一位在意大利长大的韩裔黑手党律师移居首尔。面对觊觎他所住大楼的黑心财阀,他施展出冷酷精明的黑帮手段予以反击。"
+    }
+  },
+  {
+    "id": "jp1",
+    "title": "Midnight Diner",
+    "country": "JP",
+    "tags": [
+      "slice-of-life",
+      "comedy"
+    ],
+    "featured": true,
+    "wiki": "https://en.wikipedia.org/wiki/Midnight_Diner_(Japanese_TV_series)",
+    "blurb": {
+      "en": "A late-night Tokyo diner cook will make anything a customer asks for, and every dish unlocks another regular's quiet, ordinary story.",
+      "ko": "도쿄의 심야 식당 주인은 손님이 원하는 건 뭐든 만들어준다. 요리 하나하나가 단골손님들의 조용하고 평범한 사연을 열어 보여준다.",
+      "ja": "東京の深夜食堂の主人は、客が望む料理は何でも作ってくれる。一皿ごとに、常連客たちの静かで何気ない物語が明らかになっていく。",
+      "zh": "东京一家深夜食堂的老板,客人点什么他就做什么。每一道菜背后,都藏着一位常客平凡而安静的故事。"
+    }
+  },
+  {
+    "id": "jp2",
+    "title": "Erased",
+    "country": "JP",
+    "tags": [
+      "thriller",
+      "family",
+      "coming-of-age"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Erased_(TV_series)",
+    "blurb": {
+      "en": "A struggling manga artist keeps being pulled back in time minutes before tragedy strikes, until one jump sends him all the way back to his childhood to stop a kidnapper.",
+      "ko": "무명의 만화가는 비극이 벌어지기 몇 분 전으로 계속 시간을 되돌아간다. 어느 날 그 도약은 그를 유년 시절로 완전히 데려가고, 그는 유괴범을 막아야 한다.",
+      "ja": "売れない漫画家は、悲劇が起きる数分前へと何度も時間を巻き戻される。ある時その跳躍は彼を幼少期へと丸ごと連れ戻し、彼は誘拐犯を止めなければならなくなる。",
+      "zh": "一位不得志的漫画家总是在悲剧发生前几分钟被拉回过去。有一次,这种“重启”直接把他送回了童年,他必须阻止一起绑架案的发生。"
+    }
+  },
+  {
+    "id": "jp3",
+    "title": "Alice in Borderland",
+    "country": "JP",
+    "tags": [
+      "thriller",
+      "horror",
+      "fantasy"
+    ],
+    "featured": true,
+    "wiki": "https://en.wikipedia.org/wiki/Alice_in_Borderland_(TV_series)",
+    "blurb": {
+      "en": "Three friends are pulled into a deserted Tokyo where survival means clearing brutal, game-show style challenges, each one worth another day of life.",
+      "ko": "세 친구가 인적 없는 도쿄로 빨려 들어간다. 그곳에서 살아남으려면 잔혹한 게임쇼 같은 도전을 통과해야 하며, 통과할 때마다 하루의 생명을 더 얻는다.",
+      "ja": "3人の友人が無人となった東京に迷い込む。そこで生き延びるには、過酷なゲームショーのような試練をクリアするしかなく、クリアするたびに命の猶予が一日延びる。",
+      "zh": "三个朋友被卷入一座空无一人的东京。要在这里活下去,就必须通过一场场残酷如真人秀般的游戏,每闯过一关,就能换来多活一天的机会。"
+    }
+  },
+  {
+    "id": "jp4",
+    "title": "First Love",
+    "country": "JP",
+    "tags": [
+      "romance",
+      "melodrama",
+      "coming-of-age"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/First_Love_(2022_TV_series)",
+    "blurb": {
+      "en": "Two former high school sweethearts keep drifting back into each other's orbit across almost twenty years of missed timing, set to the same old mixtape.",
+      "ko": "고등학교 시절 연인이었던 두 사람. 거의 20년 가까이 계속 엇갈리면서도 서로의 곁을 맴돈다. 그 시절 함께 듣던 믹스테이프와 함께.",
+      "ja": "高校時代の恋人だった二人。20年近くもタイミングがすれ違い続けながら、それでも互いの軌道に引き寄せられていく。あの頃の同じミックステープとともに。",
+      "zh": "曾是高中恋人的两个人,近二十年间总是错过彼此,却又一次次被拉回对方的轨道,伴随着的,是当年那盘老旧的混音带。"
+    }
+  },
+  {
+    "id": "jp5",
+    "title": "Unnatural",
+    "country": "JP",
+    "tags": [
+      "thriller",
+      "workplace",
+      "crime"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Unnatural_(TV_series)",
+    "blurb": {
+      "en": "A forensic pathologist at an independent lab fights to get the truth out of unexplained deaths that the police are ready to write off.",
+      "ko": "독립 법의학 연구소의 부검의는 경찰이 대충 덮으려는 원인 불명의 죽음들 속에서 진실을 끝까지 파헤친다.",
+      "ja": "民間の法医学研究所に勤める法医解剖医が、警察が片付けようとする原因不明の死の裏にある真実を、粘り強く暴いていく。",
+      "zh": "一位在独立法医机构工作的法医,在警方急于结案的不明死因案件中,坚持挖出背后的真相。"
+    }
+  },
+  {
+    "id": "jp6",
+    "title": "Hanzawa Naoki",
+    "country": "JP",
+    "tags": [
+      "workplace",
+      "thriller",
+      "melodrama"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Naoki_Hanzawa",
+    "blurb": {
+      "en": "A mid-level bank employee refuses to take the fall for his corrupt bosses and instead builds an airtight case to humiliate them in front of the whole company.",
+      "ko": "은행 중간 관리직 직원이 부패한 상사들의 희생양이 되기를 거부한다. 대신 그는 빈틈없는 증거를 모아 전 직원 앞에서 그들을 망신시킨다.",
+      "ja": "銀行の中間管理職の男が、腐敗した上司たちの身代わりになることを拒否する。代わりに彼は完璧な証拠を積み上げ、社員全員の前で上司たちに屈辱を味わわせる。",
+      "zh": "一位银行中层职员拒绝替腐败的上司背黑锅,反而搜集了无懈可击的证据,当着全公司的面让上司们颜面扫地。"
+    }
+  },
+  {
+    "id": "jp7",
+    "title": "Ossan's Love",
+    "country": "JP",
+    "tags": [
+      "comedy",
+      "romance",
+      "workplace"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Ossan's_Love",
+    "blurb": {
+      "en": "A perpetually unlucky-in-love salaryman discovers that both his new roommate and his office boss have fallen for him, and chaos follows.",
+      "ko": "연애운이라곤 없는 만년 노총각 회사원. 어느 날 새로 이사 온 룸메이트와 회사 상사 둘 다 자신에게 반했다는 걸 알게 되고, 소동이 시작된다.",
+      "ja": "恋愛運に恵まれない万年独身のサラリーマン。ある日、新しいルームメイトと会社の上司、両方から想いを寄せられていることに気づき、騒動が巻き起こる。",
+      "zh": "一个恋爱运极差的万年单身上班族,发现新搬来的室友和公司上司竟然都喜欢上了自己,一场混乱由此展开。"
+    }
+  },
+  {
+    "id": "jp8",
+    "title": "Silent",
+    "country": "JP",
+    "tags": [
+      "romance",
+      "melodrama",
+      "coming-of-age"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Silent_(TV_series)",
+    "blurb": {
+      "en": "A woman reconnects with her college boyfriend years later, only to learn he's slowly losing his hearing, and has been quietly pulling away rather than tell her.",
+      "ko": "한 여자가 몇 년 만에 대학 시절 연인과 다시 만난다. 하지만 그는 서서히 청력을 잃어가고 있었고, 그 사실을 말하는 대신 조용히 그녀에게서 멀어지고 있었다.",
+      "ja": "ある女性が数年ぶりに大学時代の恋人と再会する。しかし彼は徐々に聴力を失いつつあり、それを彼女に告げる代わりに、静かに距離を置こうとしていた。",
+      "zh": "一个女人多年后与大学时期的男友重逢,却发现他的听力正在逐渐丧失。他没有告诉她,只是默默地渐渐疏远了她。"
+    }
+  },
+  {
+    "id": "jp9",
+    "title": "Solitary Gourmet",
+    "country": "JP",
+    "tags": [
+      "slice-of-life",
+      "comedy"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/The_Solitary_Gourmet",
+    "blurb": {
+      "en": "A traveling salesman narrates his own internal food commentary as he wanders into small local restaurants between meetings, savoring every dish in detail.",
+      "ko": "출장이 잦은 영업사원이 미팅 사이사이 동네 작은 식당들을 찾아다닌다. 그는 마음속으로 음식에 대한 감상을 늘어놓으며 한 그릇 한 그릇을 세심하게 음미한다.",
+      "ja": "出張の多い営業マンが、商談の合間に街の小さな食堂をふらりと訪れる。彼は心の中で料理への感想を語りながら、一皿一皿をじっくりと味わっていく。",
+      "zh": "一位常年出差的销售员,总在谈生意的间隙溜进街边的小饭馆。他在心里对着每一道菜自言自语地点评,细细品味每一口。"
+    }
+  },
+  {
+    "id": "jp10",
+    "title": "Nodame Cantabile",
+    "country": "JP",
+    "tags": [
+      "comedy",
+      "romance",
+      "coming-of-age"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Nodame_Cantabile",
+    "blurb": {
+      "en": "A messy, brilliant piano student and her uptight, perfectionist classmate push each other through the pressure cooker of a Tokyo music conservatory.",
+      "ko": "천재적이지만 엉망진창인 피아노과 학생과 완벽주의에 깐깐한 동급생. 두 사람은 도쿄 음대라는 압박 속에서 서로를 자극하며 성장해 나간다.",
+      "ja": "型破りだが天才的なピアノ科の学生と、完璧主義で堅物な同級生。二人は東京の音楽大学というプレッシャーの中で、互いを刺激し合いながら成長していく。",
+      "zh": "一个邋遢却极具天赋的钢琴系学生,和一个一丝不苟、追求完美的同班同学。两人在东京音乐学院的高压环境中互相较劲,也互相成就。"
+    }
+  },
+  {
+    "id": "jp11",
+    "title": "Tokyo Vice",
+    "country": "JP",
+    "tags": [
+      "crime",
+      "thriller",
+      "workplace"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Tokyo_Vice_(TV_series)",
+    "blurb": {
+      "en": "An American reporter at a Tokyo newspaper gets pulled into the city's organized crime underworld while chasing the story that could make his career.",
+      "ko": "도쿄의 한 신문사에서 일하는 미국인 기자가 자신의 커리어를 바꿀 특종을 쫓다가 도쿄 조직범죄의 어두운 세계로 빨려 들어간다.",
+      "ja": "東京の新聞社に勤めるアメリカ人記者が、キャリアを左右する特ダネを追ううちに、東京の裏社会、組織犯罪の闇へと引き込まれていく。",
+      "zh": "一位在东京报社工作的美国记者,为了追一条能改变职业生涯的独家新闻,不知不觉卷入了东京有组织犯罪的地下世界。"
+    }
+  },
+  {
+    "id": "jp12",
+    "title": "Giri/Haji",
+    "country": "JP",
+    "tags": [
+      "crime",
+      "thriller",
+      "melodrama"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Giri/Haji",
+    "blurb": {
+      "en": "A Tokyo detective travels to London to track down his missing brother, a yakuza enforcer, before a gang war back home spills onto foreign streets.",
+      "ko": "도쿄의 한 형사가 실종된 동생, 야쿠자 행동대원을 찾아 런던으로 떠난다. 고국에서 벌어진 조직 간 전쟁이 타국의 거리로 번지기 전에 그를 찾아야 한다.",
+      "ja": "東京の刑事が、行方不明になった弟——ヤクザの構成員——を追ってロンドンへと渡る。故郷で起きた抗争が異国の街にまで飛び火する前に、彼を見つけ出さなければならない。",
+      "zh": "一位东京警探为寻找失踪的弟弟——一名黑帮打手——远赴伦敦。他必须赶在国内的黑帮火并蔓延到异国街头之前找到他。"
+    }
+  },
+  {
+    "id": "cn1",
+    "title": "Nirvana in Fire",
+    "country": "CN",
+    "tags": [
+      "historical",
+      "thriller",
+      "melodrama"
+    ],
+    "featured": true,
+    "wiki": "https://en.wikipedia.org/wiki/Nirvana_in_Fire",
+    "blurb": {
+      "en": "A brilliant strategist returns to the capital under a new identity, quietly maneuvering the imperial court to clear his family's name and settle an old betrayal.",
+      "ko": "천재적인 책사가 새로운 신분으로 수도에 돌아온다. 그는 조용히 조정을 움직여 가문의 명예를 되찾고 오래된 배신에 대한 대가를 치르게 한다.",
+      "ja": "天才軍師が新たな身分を得て都に帰還する。彼は静かに朝廷を動かし、一族の名誉を回復し、かつての裏切りに決着をつけようとする。",
+      "zh": "一位智谋超群的谋士以全新身份归京,暗中周旋于朝堂之上,只为洗清家族的冤屈,清算多年前的那场背叛。"
+    }
+  },
+  {
+    "id": "cn2",
+    "title": "The Untamed",
+    "country": "CN",
+    "tags": [
+      "fantasy",
+      "historical",
+      "thriller"
+    ],
+    "featured": true,
+    "wiki": "https://en.wikipedia.org/wiki/The_Untamed_(TV_series)",
+    "blurb": {
+      "en": "Two cultivators from rival clans reunite years after a war neither of them wanted, and start pulling apart the conspiracy that shattered their sect.",
+      "ko": "적대 관계였던 두 문파 출신의 수사(修士)가 원치 않았던 전쟁이 끝난 수년 뒤 재회한다. 두 사람은 자신들의 문파를 무너뜨린 음모를 함께 파헤치기 시작한다.",
+      "ja": "敵対する二つの門派出身の修士が、望まぬ戦から数年後に再会する。二人は自らの一門を崩壊させた陰謀の真相を、共に暴き始める。",
+      "zh": "两位分属敌对世家的修士,在一场谁都不愿卷入的战乱多年后重逢,携手揭开当年摧毁本门的重重阴谋。"
+    }
+  },
+  {
+    "id": "cn3",
+    "title": "Story of Yanxi Palace",
+    "country": "CN",
+    "tags": [
+      "historical",
+      "melodrama",
+      "thriller"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Story_of_Yanxi_Palace",
+    "blurb": {
+      "en": "A sharp-tongued palace maid climbs the ranks of the Forbidden City by outsmarting every noblewoman who underestimates her, on her way to avenging her sister.",
+      "ko": "말솜씨가 매서운 궁녀가 자신을 얕보는 귀부인들을 하나하나 제치며 자금성의 계급을 오른다. 그 끝에는 언니의 복수가 있다.",
+      "ja": "舌鋒鋭い宮女が、自分を見くびる貴婦人たちを次々と出し抜きながら、紫禁城での地位を駆け上がっていく。その先にあるのは、姉の仇討ちだ。",
+      "zh": "一位伶牙俐齿的宫女在紫禁城中步步高升,一路智斗那些轻视她的贵妇,只为了给姐姐报仇。"
+    }
+  },
+  {
+    "id": "cn4",
+    "title": "Word of Honor",
+    "country": "CN",
+    "tags": [
+      "fantasy",
+      "historical",
+      "romance"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Word_of_Honor_(TV_series)",
+    "blurb": {
+      "en": "A retired assassin and a wandering swordsman with a mysterious past team up on the road and slowly become each other's reason to keep going.",
+      "ko": "은퇴한 암살자와 정체불명의 과거를 가진 방랑하는 검객. 두 사람은 함께 길을 떠나며 서서히 서로를 살아가는 이유로 삼게 된다.",
+      "ja": "引退した暗殺者と、謎めいた過去を持つ放浪の剣士。二人は旅を共にするうちに、いつしか互いにとって生きる理由となっていく。",
+      "zh": "一位金盆洗手的刺客,与一位身世成谜、四处漂泊的侠客结伴同行,渐渐成了彼此活下去的理由。"
+    }
+  },
+  {
+    "id": "cn5",
+    "title": "Go Go Squid!",
+    "country": "CN",
+    "tags": [
+      "romance",
+      "coming-of-age",
+      "comedy"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Go_Go_Squid!",
+    "blurb": {
+      "en": "A carefree computer science student and a top-ranked esports coach fall into an unlikely marriage of convenience that turns into something neither of them planned.",
+      "ko": "천하태평한 컴퓨터공학과 학생과 최정상급 e스포츠 감독. 뜻밖의 계약 결혼을 하게 된 두 사람은 예상치 못한 감정에 빠져든다.",
+      "ja": "屈託のないコンピューター科学専攻の学生と、トップクラスのeスポーツコーチ。ひょんなことから契約結婚をすることになった二人は、思いがけない気持ちに気づいていく。",
+      "zh": "一个无忧无虑的计算机专业学生,和一位顶尖电竞教练,阴差阳错地开始了一段形式婚姻,却渐渐生出谁都没料到的感情。"
+    }
+  },
+  {
+    "id": "cn6",
+    "title": "Hidden Love",
+    "country": "CN",
+    "tags": [
+      "romance",
+      "coming-of-age",
+      "family"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Hidden_Love",
+    "blurb": {
+      "en": "A girl who has quietly loved her older brother's best friend since childhood gets a second chance when he moves back into her family's life as an adult.",
+      "ko": "어릴 적부터 오빠의 가장 친한 친구를 조용히 짝사랑해온 소녀. 그가 성인이 되어 다시 가족의 삶 속으로 돌아오면서, 그녀에게 새로운 기회가 찾아온다.",
+      "ja": "幼い頃から兄の親友をひそかに想い続けてきた少女。彼が大人になって再び家族の暮らしの中に戻ってきたことで、彼女に新たなチャンスが訪れる。",
+      "zh": "一个女孩从小暗恋哥哥最好的朋友。多年后,已经长大成人的他重新走进她的家庭生活,给了她一次重新开始的机会。"
+    }
+  },
+  {
+    "id": "cn7",
+    "title": "Love Between Fairy and Devil",
+    "country": "CN",
+    "tags": [
+      "fantasy",
+      "romance",
+      "comedy"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Love_Between_Fairy_and_Devil",
+    "blurb": {
+      "en": "A cheerful, low-ranking fairy accidentally absorbs the memories of a legendary demon lord, and now has to babysit the very man history says she's fated to destroy.",
+      "ko": "명랑하고 지위 낮은 선녀가 실수로 전설적인 마왕의 기억을 흡수하게 된다. 그녀는 역사가 자신이 없애야 할 운명이라 말하는 바로 그 남자를 돌봐야 하는 처지에 놓인다.",
+      "ja": "明るく地位の低い仙女が、うっかり伝説の魔王の記憶を吸収してしまう。彼女は、歴史が「滅ぼす運命」と語るまさにその男の面倒を見る羽目になる。",
+      "zh": "一位性格开朗、地位低微的小仙女,意外吸收了传说中魔尊的记忆,从此不得不看管这位史书记载中她命定要毁灭的男人。"
+    }
+  },
+  {
+    "id": "cn8",
+    "title": "The Long Season",
+    "country": "CN",
+    "tags": [
+      "thriller",
+      "family",
+      "melodrama"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/The_Long_Season",
+    "blurb": {
+      "en": "A retired factory worker reopens a twenty-year-old unsolved case after a chance encounter drags up all the questions his family never got to ask.",
+      "ko": "은퇴한 공장 노동자가 우연한 만남을 계기로 20년 전 미제 사건을 다시 파헤친다. 그 사건은 가족이 끝내 묻지 못했던 질문들을 다시 끄집어낸다.",
+      "ja": "退職した工場労働者が、ある偶然の出会いをきっかけに20年前の未解決事件を再び調べ始める。それは家族が問いただせなかった疑問の数々を呼び覚ましていく。",
+      "zh": "一位退休的工厂工人,因一次偶然的相遇重新翻查二十年前的悬案,牵出了家人当年从未来得及问出口的所有疑问。"
+    }
+  },
+  {
+    "id": "cn9",
+    "title": "Empresses in the Palace",
+    "country": "CN",
+    "tags": [
+      "historical",
+      "melodrama",
+      "thriller"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Empresses_in_the_Palace",
+    "blurb": {
+      "en": "A naive girl entering the emperor's harem learns fast that surviving the palace means outscheming every rival who wants her gone.",
+      "ko": "순진했던 소녀가 황제의 후궁으로 궁에 들어간다. 그녀는 곧 깨닫는다. 궁에서 살아남으려면 자신을 몰아내려는 모든 경쟁자들보다 한 수 앞서야 한다는 것을.",
+      "ja": "純真だった少女が皇帝の後宮に入る。彼女はすぐに悟る——後宮で生き残るには、自分を蹴落とそうとするあらゆる政敵を出し抜かねばならないと。",
+      "zh": "一个天真的女孩入宫成为妃嫔,很快便懂得:要在后宫活下去,就必须斗赢每一个想将她除之而后快的对手。"
+    }
+  },
+  {
+    "id": "cn10",
+    "title": "Meteor Garden",
+    "country": "CN",
+    "tags": [
+      "romance",
+      "coming-of-age",
+      "comedy"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Meteor_Garden_(2018_TV_series)",
+    "blurb": {
+      "en": "A working-class girl clashes with the four wealthy, arrogant heirs who run her university, and ends up falling for the coldest one of the bunch.",
+      "ko": "평범한 집안의 소녀가 대학을 주름잡는 네 명의 오만한 재벌가 후계자들과 부딪힌다. 그리고 그중 가장 냉랭한 남자와 결국 사랑에 빠진다.",
+      "ja": "庶民の家庭に育った少女が、大学を牛耳る4人の傲慢な富豪の御曹司たちとぶつかり合う。そして結局、その中で最も冷たい男に恋をしてしまう。",
+      "zh": "一个出身普通的女孩与掌控大学的四位傲慢富家公子屡屡交锋,最终却爱上了其中最冷漠的那一个。"
+    }
+  },
+  {
+    "id": "cn11",
+    "title": "Joy of Life",
+    "country": "CN",
+    "tags": [
+      "historical",
+      "fantasy",
+      "comedy"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Joy_of_Life_(TV_series)",
+    "blurb": {
+      "en": "A modern man reborn into a feudal kingdom's most unassuming family uses his outsider knowledge to survive court politics he was never supposed to understand.",
+      "ko": "현대인이 봉건 왕국의 보잘것없는 가문으로 환생한다. 그는 이방인의 지식을 활용해 원래는 이해할 수 없었을 조정의 암투 속에서 살아남는다.",
+      "ja": "現代人が封建王朝の目立たない家に転生する。彼は本来理解できるはずのなかった宮廷の権力闘争を、異世界人としての知識を武器に生き抜いていく。",
+      "zh": "一个现代人重生到一个封建王朝里毫不起眼的人家,凭借局外人的见识,在本不该他懂的朝堂权谋中艰难求生。"
+    }
+  },
+  {
+    "id": "cn12",
+    "title": "Someday or One Day",
+    "country": "CN",
+    "tags": [
+      "thriller",
+      "romance",
+      "coming-of-age"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Someday_or_One_Day",
+    "blurb": {
+      "en": "A woman finds a mix CD that keeps sending her consciousness back into her own teenage body, forcing her to relive, and maybe rewrite, the year everything changed.",
+      "ko": "한 여자가 우연히 발견한 믹스 CD 하나가 그녀의 의식을 계속 십대 시절의 몸으로 되돌려 보낸다. 그녀는 모든 것이 바뀌었던 그 해를 다시 살아내며, 어쩌면 다시 쓸 수도 있다.",
+      "ja": "ある女性が見つけた一枚のミックスCDが、彼女の意識を何度も十代の頃の自分の体へと送り返す。彼女はすべてが変わったあの年を生き直し、もしかしたら書き換えることになるかもしれない。",
+      "zh": "一个女人偶然发现的一张混音CD,总是把她的意识送回自己十几岁的身体里。她被迫一次次重新经历、也或许能够改写那个改变一切的年份。"
+    }
+  },
+  {
+    "id": "kr13",
+    "title": "It's Okay to Not Be Okay",
+    "country": "KR",
+    "tags": [
+      "romance",
+      "melodrama",
+      "family"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/It's_Okay_to_Not_Be_Okay",
+    "blurb": {
+      "en": "A children's book author with an antisocial personality disorder pursues a psychiatric ward caretaker who has spent his whole life protecting his autistic older brother.",
+      "ko": "반사회적 인격장애를 가진 동화 작가가, 자폐를 가진 형을 평생 지켜온 정신병동 보호사에게 다가간다.",
+      "ja": "反社会性パーソナリティ障害を持つ童話作家が、自閉症の兄を生涯にわたって守り続けてきた精神病棟の保護士に心を寄せていく。",
+      "zh": "一位患有反社会型人格障碍的童话作家,主动接近一名精神病院护理员——这名护理员一生都在守护患有自闭症的哥哥。"
+    }
+  },
+  {
+    "id": "kr14",
+    "title": "Move to Heaven",
+    "country": "KR",
+    "tags": [
+      "slice-of-life",
+      "family",
+      "coming-of-age"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Move_to_Heaven",
+    "blurb": {
+      "en": "An autistic young man who cleans out the homes of the recently deceased for a living takes in the ex-convict uncle he barely knows after his father's sudden death.",
+      "ko": "자폐를 가진 청년이 유품 정리사로 일하며 살아간다. 아버지가 갑작스레 세상을 떠난 뒤, 그는 거의 모르는 삼촌, 전과자인 그를 거두게 된다.",
+      "ja": "自閉症の青年が遺品整理士として生計を立てている。父の突然の死をきっかけに、彼はほとんど知らない叔父——前科者——を引き取ることになる。",
+      "zh": "一位患有自闭症的青年,以整理遗物为生。父亲突然离世后,他不得不收留几乎素未谋面的叔叔——一个曾经的服刑人员。"
+    }
+  },
+  {
+    "id": "kr15",
+    "title": "Hellbound",
+    "country": "KR",
+    "tags": [
+      "horror",
+      "thriller"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Hellbound_(TV_series)",
+    "blurb": {
+      "en": "Otherworldly beings start appearing out of nowhere to violently condemn ordinary people to hell, and a new religious movement rushes to declare it all divine justice.",
+      "ko": "정체불명의 초자연적 존재들이 갑자기 나타나 평범한 사람들을 잔혹하게 지옥으로 보내기 시작한다. 새로운 종교 단체는 이를 서둘러 신의 심판이라 선포한다.",
+      "ja": "得体の知れない超自然的存在が突如現れ、罪なき人々を無慈悲に地獄へと送り始める。新興宗教団体はそれを神の裁きだと急いで宣言する。",
+      "zh": "不知从何而来的超自然存在突然出现,残忍地将普通人打入地狱。一个新兴宗教组织迅速宣称,这一切都是神的审判。"
+    }
+  },
+  {
+    "id": "kr16",
+    "title": "All of Us Are Dead",
+    "country": "KR",
+    "tags": [
+      "horror",
+      "thriller",
+      "coming-of-age"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/All_of_Us_Are_Dead",
+    "blurb": {
+      "en": "A high school becomes ground zero for a zombie outbreak, trapping a group of students who have to fight their way out before the infection spreads across the rest of the city.",
+      "ko": "한 고등학교가 좀비 사태의 발원지가 된다. 갇힌 학생들은 감염이 도시 전역으로 퍼지기 전에 싸워서 탈출해야 한다.",
+      "ja": "ある高校がゾンビ発生の震源地となる。閉じ込められた生徒たちは、感染が街全体に広がる前に、戦って脱出しなければならない。",
+      "zh": "一所高中成为丧尸爆发的源头。被困在校内的学生们必须奋力突围,赶在疫情蔓延至全市之前逃出生天。"
+    }
+  },
+  {
+    "id": "kr17",
+    "title": "Weightlifting Fairy Kim Bok-joo",
+    "country": "KR",
+    "tags": [
+      "romance",
+      "comedy",
+      "coming-of-age"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Weightlifting_Fairy_Kim_Bok-joo",
+    "blurb": {
+      "en": "A talented college weightlifter with zero interest in romance develops feelings for her childhood friend, a competitive swimmer chasing his own Olympic dream.",
+      "ko": "연애에는 전혀 관심 없는 재능 있는 대학 역도 선수. 그녀는 올림픽을 꿈꾸는 경쟁 수영 선수인 소꿉친구에게 서서히 마음이 기운다.",
+      "ja": "恋愛にはまるで興味のない、才能あふれる大学の重量挙げ選手。彼女は、オリンピックを夢見る競泳選手の幼なじみに次第に惹かれていく。",
+      "zh": "一位对恋爱毫无兴趣、天赋出众的大学举重运动员,渐渐对青梅竹马产生了感情——那是一位追逐奥运梦想的竞技游泳选手。"
+    }
+  },
+  {
+    "id": "kr18",
+    "title": "Sky Castle",
+    "country": "KR",
+    "tags": [
+      "thriller",
+      "family",
+      "melodrama"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Sky_Castle",
+    "blurb": {
+      "en": "Wealthy families in an exclusive gated community will do almost anything, including hiring secretive college admissions coordinators, to get their children into Korea's top universities.",
+      "ko": "고급 폐쇄형 주거단지에 사는 부유한 가족들. 그들은 자녀를 한국 최고의 대학에 보내기 위해 은밀한 입시 코디네이터를 고용하는 등 무엇이든 서슴지 않는다.",
+      "ja": "高級な閉鎖型住宅街に暮らす裕福な家族たち。子どもを韓国トップの大学に入れるためなら、秘密の受験コーディネーターを雇うことも厭わない。",
+      "zh": "住在高档封闭社区里的富裕家庭们,为了让孩子考进韩国顶尖大学,不惜聘请神秘的“升学顾问”,几乎无所不用其极。"
+    }
+  },
+  {
+    "id": "jp13",
+    "title": "Death Note",
+    "country": "JP",
+    "tags": [
+      "thriller",
+      "fantasy",
+      "crime"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Death_Note_(2015_TV_series)",
+    "blurb": {
+      "en": "A brilliant, bored high schooler finds a notebook that can kill anyone whose name is written in it, and starts a private war against crime with a mysterious detective on his trail.",
+      "ko": "천재적이지만 권태로운 고등학생이 이름을 적으면 누구든 죽일 수 있는 노트를 손에 넣는다. 그는 홀로 범죄와의 전쟁을 시작하고, 정체불명의 탐정이 그의 뒤를 쫓는다.",
+      "ja": "天才的だが退屈を持て余す高校生が、名前を書けば誰でも殺せるノートを手にする。彼は独りで犯罪との戦いを始めるが、謎の名探偵がその正体を追い始める。",
+      "zh": "一位才华横溢却百无聊赖的高中生,得到了一本写上名字就能杀死任何人的笔记本。他独自展开一场针对犯罪的私人战争,而一位神秘侦探正紧追其后。"
+    }
+  },
+  {
+    "id": "jp14",
+    "title": "Boys Over Flowers",
+    "country": "JP",
+    "tags": [
+      "romance",
+      "comedy",
+      "coming-of-age"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Boys_Over_Flowers_(2005_TV_series)",
+    "blurb": {
+      "en": "A working-class girl stands up to the four wealthy bullies who run her elite high school and slowly falls for the coldest, most volatile one of the group.",
+      "ko": "평범한 집안의 소녀가 명문 고등학교를 주름잡는 네 명의 부유한 불량 학생들에게 당당히 맞선다. 그리고 그중 가장 냉정하고 다혈질인 남학생에게 서서히 마음을 연다.",
+      "ja": "庶民の家庭に育った少女が、名門高校を牛耳る4人の富豪の不良たちに堂々と立ち向かう。そして、その中で最も冷淡で気性の荒い男子に、次第に心を惹かれていく。",
+      "zh": "一个出身普通的女孩,勇敢对抗掌控名门高中的四位富家纨绔子弟,却渐渐爱上了其中最冷漠、脾气最暴躁的那一个。"
+    }
+  },
+  {
+    "id": "jp15",
+    "title": "Suits",
+    "country": "JP",
+    "tags": [
+      "workplace",
+      "comedy"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Suits_(Japanese_TV_series)",
+    "blurb": {
+      "en": "A brilliant but uncredentialed young man with a photographic memory talks his way into one of Tokyo's top law firms by posing as someone he isn't.",
+      "ko": "학위는 없지만 뛰어난 두뇌와 완벽한 기억력을 가진 청년. 그는 다른 사람인 척 속이며 도쿄 최고의 로펌에 입사한다.",
+      "ja": "学歴はないが驚異的な記憶力を持つ青年が、他人になりすまして東京トップの法律事務所に潜り込む。",
+      "zh": "一个没有学历,却拥有过目不忘记忆力的年轻人,冒充他人身份,凭借三寸不烂之舌混进了东京顶尖的律师事务所。"
+    }
+  },
+  {
+    "id": "jp16",
+    "title": "Followers",
+    "country": "JP",
+    "tags": [
+      "slice-of-life",
+      "coming-of-age",
+      "family"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Followers_(TV_series)",
+    "blurb": {
+      "en": "An aging photographer and an aspiring actress watch their lives and careers get reshaped by the unpredictable currents of social media fame in modern Tokyo.",
+      "ko": "나이 든 사진작가와 배우 지망생. 두 사람의 삶과 커리어는 현대 도쿄를 휩쓰는 예측불가한 소셜미디어 유명세의 흐름 속에서 새롭게 뒤바뀐다.",
+      "ja": "年を重ねた写真家と、女優を目指す若者。二人の人生とキャリアは、現代の東京を席巻する予測不能なSNSの名声の波にのまれ、変容していく。",
+      "zh": "一位年长的摄影师和一位怀揣演员梦的女孩,他们的生活与事业,在当代东京难以预料的社交媒体名利浪潮中被彻底改写。"
+    }
+  },
+  {
+    "id": "jp17",
+    "title": "La Grande Maison Tokyo",
+    "country": "JP",
+    "tags": [
+      "workplace",
+      "slice-of-life"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/La_Grande_Maison_Tokyo",
+    "blurb": {
+      "en": "A disgraced chef gets one last shot at a Michelin star by opening a new French restaurant with a scrappy, mismatched kitchen team.",
+      "ko": "명예를 잃은 셰프에게 찾아온 마지막 기회. 그는 오합지졸 주방팀과 함께 새로운 프렌치 레스토랑을 열어 미슐랭 스타에 다시 도전한다.",
+      "ja": "汚名を着せられたシェフに訪れた最後のチャンス。彼は寄せ集めのキッチンチームとともに新しいフレンチレストランを開き、ミシュランの星に再挑戦する。",
+      "zh": "一位声名扫地的主厨迎来最后一次机会。他带着一支七拼八凑、格格不入的厨房团队,开设新的法餐厅,再次冲击米其林星级。"
+    }
+  },
+  {
+    "id": "jp18",
+    "title": "Good Morning Call",
+    "country": "JP",
+    "tags": [
+      "romance",
+      "comedy",
+      "coming-of-age"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Good_Morning_Call",
+    "blurb": {
+      "en": "A high school girl who has just moved into her dream apartment discovers she has to secretly share it with the most popular boy in school.",
+      "ko": "꿈에 그리던 집으로 이사한 여고생. 하지만 그녀는 학교에서 가장 인기 많은 남학생과 그 집을 몰래 함께 써야 한다는 사실을 알게 된다.",
+      "ja": "念願のマンションに引っ越したばかりの女子高生。しかし彼女は、学校で一番人気の男子と、その部屋をこっそりシェアしなければならないことに気づく。",
+      "zh": "一位刚搬进梦想公寓的女高中生,却发现自己必须瞒着所有人,和学校里最受欢迎的男生共住一室。"
+    }
+  },
+  {
+    "id": "cn13",
+    "title": "The Rise of Phoenixes",
+    "country": "CN",
+    "tags": [
+      "historical",
+      "thriller",
+      "romance"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/The_Rise_of_Phoenixes",
+    "blurb": {
+      "en": "An overlooked princess disguised as a man and an exiled prince form an alliance of convenience that slowly pulls them both toward a throne neither of them was supposed to want.",
+      "ko": "존재감 없던 공주가 남장을 하고, 유배당한 황자와 이해관계로 얽힌 동맹을 맺는다. 두 사람은 원래 원치 않았던 왕좌를 향해 서서히 함께 나아가게 된다.",
+      "ja": "存在を軽んじられていた皇女が男装し、追放された皇子と利害の一致で手を組む。二人は本来望んでいなかったはずの玉座へと、次第に引き寄せられていく。",
+      "zh": "一位不受重视、女扮男装的公主,与一位被流放的皇子结成利益联盟,两人渐渐被卷向一个本不该属于他们的皇位。"
+    }
+  },
+  {
+    "id": "cn14",
+    "title": "Ashes of Love",
+    "country": "CN",
+    "tags": [
+      "fantasy",
+      "romance",
+      "historical"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Ashes_of_Love_(TV_series)",
+    "blurb": {
+      "en": "The daughter of the Flower Goddess, raised on a pill that blocks her from feeling love, falls for a young war god despite a fate that was built to keep them apart.",
+      "ko": "화신(花神)의 딸은 사랑을 느끼지 못하게 하는 단약을 먹고 자란다. 그런 그녀가 젊은 전쟁의 신에게 사랑에 빠지고 만다, 둘을 갈라놓기 위해 정해진 운명에도 불구하고.",
+      "ja": "花の女神の娘は、恋の感情を封じる丹薬を飲んで育てられた。それでも彼女は若き戦神に恋をしてしまう——二人を引き離すために定められた運命に逆らって。",
+      "zh": "花神之女自幼服用能阻断爱意的丹药长大,却还是爱上了年轻的战神,即便命运早已注定要将两人分开。"
+    }
+  },
+  {
+    "id": "cn15",
+    "title": "Eternal Love",
+    "country": "CN",
+    "tags": [
+      "fantasy",
+      "romance",
+      "melodrama"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Eternal_Love_(TV_series)",
+    "blurb": {
+      "en": "An immortal fox spirit and an ambitious young sky prince share three lifetimes of love, war, and memory loss across three separate realms.",
+      "ko": "불멸의 여우 요괴와 야심 찬 젊은 천계의 황자. 두 사람은 세 개의 서로 다른 세계를 넘나들며 세 번의 생에 걸친 사랑과 전쟁, 그리고 기억 상실을 함께 겪는다.",
+      "ja": "不老不死の狐の妖精と、野心を秘めた若き天界の皇子。二人は三つの異なる世界をまたぎながら、三度の生涯にわたる恋と戦、そして記憶喪失を共に経験していく。",
+      "zh": "一位长生不老的狐仙,与一位胸怀抱负的年轻天族太子,在三个不同界域中,共同经历了三世的爱恨、战乱与失忆。"
+    }
+  },
+  {
+    "id": "cn16",
+    "title": "Blossoms Shanghai",
+    "country": "CN",
+    "tags": [
+      "workplace",
+      "melodrama",
+      "historical"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Blossoms_Shanghai",
+    "blurb": {
+      "en": "A small-time trader claws his way into Shanghai's cutthroat 1990s business world, guided and complicated by three very different women along the way.",
+      "ko": "작게 시작한 상인이 1990년대 살벌한 상하이 비즈니스 세계로 악착같이 뛰어든다. 그 길에서 만난 성격이 판이하게 다른 세 여성이 그를 이끌기도, 흔들기도 한다.",
+      "ja": "小さな商人が、1990年代の弱肉強食の上海ビジネス界に食らいついていく。その道のりで出会う、まったく異なる三人の女性たちが彼を導きながらも、事態を複雑にしていく。",
+      "zh": "一个白手起家的小商人,在90年代弱肉强食的上海商界闯出一片天,一路上有三位性格迥异的女性,既是他的引路人,也让局面变得更加复杂。"
+    }
+  },
+  {
+    "id": "cn17",
+    "title": "My Girlfriend is an Alien",
+    "country": "CN",
+    "tags": [
+      "fantasy",
+      "comedy",
+      "romance"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/My_Girlfriend_Is_an_Alien",
+    "blurb": {
+      "en": "An extraterrestrial who cannot stand physical touch crash-lands on Earth and poses as a marketing employee at the company run by the man who is about to become her biggest problem.",
+      "ko": "신체 접촉을 견디지 못하는 외계인이 지구에 불시착한다. 그녀는 마케팅 직원으로 위장해 취직하는데, 하필 그 회사를 운영하는 남자가 그녀의 가장 큰 골칫거리가 될 참이다.",
+      "ja": "身体的接触に耐えられない宇宙人が地球に不時着する。彼女はマーケティング担当社員になりすまして就職するが、よりによってその会社を経営する男が、彼女の最大の悩みの種になろうとしていた。",
+      "zh": "一位无法忍受肢体接触的外星人意外坠落地球,伪装成一名市场部员工,而这家公司的老板,即将成为她最大的麻烦。"
+    }
+  },
+  {
+    "id": "cn18",
+    "title": "Story of Kunning Palace",
+    "country": "CN",
+    "tags": [
+      "historical",
+      "thriller",
+      "romance"
+    ],
+    "featured": false,
+    "wiki": "https://en.wikipedia.org/wiki/Story_of_Kunning_Palace",
+    "blurb": {
+      "en": "A woman who died the first time she reached the top of the palace hierarchy wakes back up at the beginning of her story, determined to burn the whole rigged game down before it can happen again.",
+      "ko": "궁중 서열의 정점에 오르자마자 죽음을 맞았던 여자. 그녀는 자신의 이야기가 시작되던 그 순간으로 다시 깨어나, 조작된 이 판을 다시 겪기 전에 모조리 무너뜨리기로 결심한다.",
+      "ja": "後宮の頂点に上り詰めた瞬間に命を落とした女性。彼女は物語の始まりの時点へと目を覚まし、この仕組まれたゲームが再び繰り返される前に、すべてを焼き尽くすと決意する。",
+      "zh": "一个女人在登上后宫权力顶峰的那一刻死去,却在自己故事的起点重新醒来。这一次,她决心把这场被操控的棋局彻底掀翻,绝不让悲剧重演。"
+    }
+  }
+];
+  var TAG_IDS = Object.keys(TAG_LABELS.en);
+
+  var LANG = 'en';
+  var state = {region:'ALL', tags:new Set()};
+
+  // ---------- language switcher ----------
+  var LANGS = ['en','ko','ja','zh'];
+  var langSwitch = document.getElementById('langSwitch');
+  LANGS.forEach(function(code){
+    var b = document.createElement('button');
+    b.className = 'lang-btn';
+    b.type = 'button';
+    b.dataset.lang = code;
+    b.setAttribute('aria-pressed', code === 'en' ? 'true' : 'false');
+    b.textContent = UI[code].langName;
+    b.addEventListener('click', function(){
+      applyLanguage(code);
+    });
+    langSwitch.appendChild(b);
+  });
+
+  // ---------- ticker (titles stay in their original form across languages) ----------
+  var tickerTrack = document.getElementById('tickerTrack');
+  var tickerTitles = SHOWS.map(function(s){return '<span>'+s.title+'</span>';}).join('');
+  tickerTrack.innerHTML = tickerTitles + tickerTitles;
+
+  // ---------- region chips ----------
+  var regionRow = document.getElementById('regionRow');
+  var regionOrder = ['ALL','KR','JP','CN'];
+  regionOrder.forEach(function(code){
+    var b = document.createElement('button');
+    b.className = 'chip-region';
+    b.type = 'button';
+    b.dataset.region = code;
+    b.setAttribute('aria-pressed', code === 'ALL' ? 'true' : 'false');
+    var glyph = code === 'ALL' ? '全' : COUNTRY_GLYPH[code];
+    b.innerHTML = '<span class="glyph">'+glyph+'</span><span class="region-label"></span>';
+    b.addEventListener('click', function(){
+      state.region = code;
+      Array.prototype.forEach.call(regionRow.children, function(chip){
+        chip.setAttribute('aria-pressed', chip.dataset.region === code ? 'true' : 'false');
+      });
+      render();
+    });
+    regionRow.appendChild(b);
+  });
+
+  // ---------- mood chips ----------
+  var moodGrid = document.getElementById('moodGrid');
+  TAG_IDS.forEach(function(tagId){
+    var b = document.createElement('button');
+    b.className = 'chip-mood';
+    b.type = 'button';
+    b.dataset.tag = tagId;
+    b.setAttribute('aria-pressed', 'false');
+    b.addEventListener('click', function(){
+      if(state.tags.has(tagId)){
+        state.tags.delete(tagId);
+        b.setAttribute('aria-pressed','false');
+      } else {
+        state.tags.add(tagId);
+        b.setAttribute('aria-pressed','true');
+      }
+      render();
+    });
+    moodGrid.appendChild(b);
+  });
+
+  document.getElementById('startBtn').addEventListener('click', function(){
+    document.getElementById('tuner').scrollIntoView({behavior:'smooth', block:'start'});
+  });
+  document.getElementById('scanBtn').addEventListener('click', function(){
+    document.getElementById('lineup').scrollIntoView({behavior:'smooth', block:'start'});
+  });
+  document.getElementById('clearBtn').addEventListener('click', function(){
+    state.tags.clear();
+    Array.prototype.forEach.call(moodGrid.children, function(chip){
+      chip.setAttribute('aria-pressed','false');
+    });
+    render();
+  });
+  document.getElementById('surpriseBtn').addEventListener('click', function(){
+    var pool = SHOWS.filter(function(s){return state.region === 'ALL' || s.country === state.region;});
+    if(pool.length === 0) return;
+    var pick = pool[Math.floor(Math.random()*pool.length)];
+    renderBonus(pick);
+    document.getElementById('bonusSlot').scrollIntoView({behavior:'smooth', block:'center'});
+  });
+
+  function stampSVG(country){
+    var glyph = COUNTRY_GLYPH[country];
+    var color = country === 'KR' ? 'var(--indigo)' : (country === 'JP' ? 'var(--seal)' : 'var(--gold)');
+    var textColor = country === 'CN' ? '#17130f' : '#f3ead9';
+    return '<svg class="stamp" viewBox="0 0 64 64" role="img" aria-label="'+COUNTRY_NAMES[LANG][country]+' seal">'+
+      '<g filter="url(#roughEdge)">'+
+      '<circle cx="32" cy="32" r="27" fill="'+color+'" />'+
+      '<circle cx="32" cy="32" r="27" fill="none" stroke="'+textColor+'" stroke-width="1.5" opacity="0.5"/>'+
+      '</g>'+
+      '<text x="32" y="41" text-anchor="middle" font-family="Zen Old Mincho, serif" font-size="26" fill="'+textColor+'">'+glyph+'</text>'+
+      '</svg>';
+  }
+
+  function tagLabel(tagId){
+    return TAG_LABELS[LANG][tagId] || tagId;
+  }
+
+  function metaFeatured(n, region){
+    if(LANG==='en') return 'Showing <b>'+n+'</b> featured picks from <b>'+region+'</b>. Select a mood above to narrow the lineup.';
+    if(LANG==='ko') return '<b>'+region+'</b> 지역의 추천작 <b>'+n+'</b>편을 보여드리고 있어요. 위에서 분위기를 골라보면 더 좁혀드릴게요.';
+    if(LANG==='ja') return '<b>'+region+'</b>のおすすめ<b>'+n+'</b>作品を表示しています。上で気分を選ぶと絞り込めます。';
+    return '正在展示来自<b>'+region+'</b>的<b>'+n+'</b>部精选剧。在上面选择心情可以进一步筛选。';
+  }
+  function metaMatches(n, region){
+    if(LANG==='en') return 'Showing <b>'+n+'</b> match'+(n===1?'':'es')+' for your picks in <b>'+region+'</b>.';
+    if(LANG==='ko') return '<b>'+region+'</b> 지역에서 취향에 맞는 작품 <b>'+n+'</b>편을 찾았어요.';
+    if(LANG==='ja') return '<b>'+region+'</b>で、選んだ気分に合う作品が<b>'+n+'</b>件見つかりました。';
+    return '在<b>'+region+'</b>找到<b>'+n+'</b>部符合你选择的剧。';
+  }
+  function metaNoMatches(region){
+    if(LANG==='en') return 'No matches for this combination in <b>'+region+'</b>.';
+    if(LANG==='ko') return '<b>'+region+'</b> 지역에는 이 조합에 맞는 작품이 없어요.';
+    if(LANG==='ja') return '<b>'+region+'</b>には、この組み合わせに合う作品がありません。';
+    return '<b>'+region+'</b>暂时没有符合这个组合的剧。';
+  }
+  function moodsSelectedText(n){
+    if(LANG==='en') return n + (n===1 ? ' mood selected' : ' moods selected');
+    if(LANG==='ko') return n + '개 선택됨';
+    if(LANG==='ja') return n + '個選択中';
+    return n + '个心情已选';
+  }
+
+  function cardHTML(show, index, matchedTags){
+    var metaTags = show.tags.map(tagLabel).join(' · ');
+    var seedRot = (show.id.charCodeAt(show.id.length-1) % 7) - 3;
+
+    var whyBlock = '';
+    if(matchedTags && matchedTags.length){
+      var labels = matchedTags.map(tagLabel).join(', ');
+      whyBlock = '<div class="why">'+UI[LANG].goodFitFor+' '+labels+'</div>';
+    } else if(show.featured){
+      whyBlock = '<div class="featured-tag">'+UI[LANG].featuredTonight+'</div>';
+    }
+
+    var blurbText = show.blurb[LANG] || show.blurb.en;
+
+    return '<article class="card" style="transform:rotate('+ (seedRot*0.15) +'deg)">'+
+      '<div class="card-top">' + stampSVG(show.country) + '</div>'+
+      '<h3>'+show.title+'</h3>'+
+      '<div class="card-meta"><span class="dot '+show.country+'"></span>'+COUNTRY_NAMES[LANG][show.country]+' &nbsp;·&nbsp; '+metaTags+'</div>'+
+      '<p class="blurb">'+blurbText+'</p>'+
+      whyBlock+
+      '<a class="wiki-link" href="'+show.wiki+'" target="_blank" rel="noopener noreferrer">'+UI[LANG].wikiLinkText+' <span aria-hidden="true">&#8599;</span></a>'+
+      '</article>';
+  }
+
+  function renderBonus(show){
+    var slot = document.getElementById('bonusSlot');
+    var html = '<h3 style="font-family:var(--font-body);font-weight:700;font-size:13px;letter-spacing:0.04em;color:var(--gold);margin:0 0 10px;">'+UI[LANG].bonusLabel+'</h3>';
+    var wrap = document.createElement('div');
+    wrap.className = 'grid';
+    wrap.style.gridTemplateColumns = '1fr';
+    wrap.style.maxWidth = '360px';
+    wrap.innerHTML = cardHTML(show, SHOWS.indexOf(show), null).replace('class="card"','class="card bonus pulse"');
+    slot.innerHTML = html;
+    slot.appendChild(wrap);
+  }
+
+  function regionDisplayName(code){
+    return code === 'ALL' ? UI[LANG].allRegions : COUNTRY_NAMES[LANG][code];
+  }
+
+  function render(){
+    var selCount = document.getElementById('selCount');
+    selCount.textContent = moodsSelectedText(state.tags.size);
+
+    var pool = SHOWS.filter(function(s){return state.region === 'ALL' || s.country === state.region;});
+    var meta = document.getElementById('resultsMeta');
+    var grid = document.getElementById('grid');
+    grid.innerHTML = '';
+
+    var regionLabel = regionDisplayName(state.region);
+
+    if(state.tags.size === 0){
+      var featured = pool.filter(function(s){return s.featured;});
+      if(featured.length === 0) featured = pool.slice(0,6);
+      meta.innerHTML = metaFeatured(featured.length, regionLabel);
+      featured.forEach(function(s, i){
+        grid.insertAdjacentHTML('beforeend', cardHTML(s, i, null));
+      });
+      return;
+    }
+
+    var scored = pool.map(function(s){
+      var matched = s.tags.filter(function(t){return state.tags.has(t);});
+      return {show:s, matched:matched, score:matched.length};
+    }).filter(function(x){return x.score > 0;});
+
+    scored.sort(function(a,b){return b.score - a.score;});
+
+    if(scored.length === 0){
+      meta.innerHTML = metaNoMatches(regionLabel);
+      grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1;"><span class="big">'+UI[LANG].emptyBig+'</span>'+UI[LANG].emptySub+'</div>';
+      return;
+    }
+
+    meta.innerHTML = metaMatches(scored.length, regionLabel);
+    scored.forEach(function(x, i){
+      grid.insertAdjacentHTML('beforeend', cardHTML(x.show, i, x.matched));
+    });
+  }
+
+  function applyLanguage(lang){
+    LANG = lang;
+    document.documentElement.lang = HTML_LANG[lang];
+    document.title = UI[lang].brandName;
+
+    Array.prototype.forEach.call(langSwitch.children, function(btn){
+      btn.setAttribute('aria-pressed', btn.dataset.lang === lang ? 'true' : 'false');
+    });
+
+    document.getElementById('wordmarkText').textContent = UI[lang].brandName;
+    document.getElementById('wordmarkSub').innerHTML = UI[lang].brandSub;
+    document.getElementById('eyebrowText').textContent = UI[lang].eyebrow;
+    document.getElementById('headlineText').textContent = UI[lang].headline;
+    document.getElementById('subText').textContent = UI[lang].sub;
+    document.getElementById('startBtnText').textContent = UI[lang].getStarted;
+    document.getElementById('moodSectionHeadingText').textContent = UI[lang].moodSectionHeading;
+    document.getElementById('regionLabelText').textContent = UI[lang].regionLabel;
+    document.getElementById('moodLabelText').innerHTML = UI[lang].moodLabel;
+    document.getElementById('scanBtnText').textContent = UI[lang].seeLineup;
+    document.getElementById('surpriseBtnText').textContent = UI[lang].surpriseMe;
+    document.getElementById('clearBtn').textContent = UI[lang].clearMoods;
+    document.getElementById('lineupHeadingText').textContent = UI[lang].lineupHeading;
+    document.getElementById('footer1Text').textContent = UI[lang].footer1;
+    document.getElementById('footer2Text').textContent = UI[lang].footer2;
+
+    document.getElementById('glyphLegend').innerHTML =
+      '<span><b>韓</b>'+COUNTRY_NAMES[lang].KR+'</span>'+
+      '<span><b>日</b>'+COUNTRY_NAMES[lang].JP+'</span>'+
+      '<span><b>中</b>'+COUNTRY_NAMES[lang].CN+'</span>';
+
+    Array.prototype.forEach.call(regionRow.children, function(chip){
+      var code = chip.dataset.region;
+      chip.querySelector('.region-label').textContent = regionDisplayName(code);
+    });
+
+    Array.prototype.forEach.call(moodGrid.children, function(chip){
+      chip.textContent = tagLabel(chip.dataset.tag);
+    });
+
+    document.getElementById('bonusSlot').innerHTML = '';
+
+    render();
+  }
+
+  applyLanguage('en');
+})();
+</script>
+</body>
+</html>
